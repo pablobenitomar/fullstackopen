@@ -1,4 +1,16 @@
 
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+This is the diagram: 
+
 ```mermaid
 sequenceDiagram
     participant browser
@@ -27,4 +39,4 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-    ```
+```
