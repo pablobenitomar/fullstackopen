@@ -19,11 +19,22 @@ const Part = (props) => {
   )
 }
 
+const Content = (props) =>{
+  console.log("Content",props)
+  return (
+    <>
+       <Part part={props.parts[0]} />
+       <Part part={props.parts[1]} />
+       <Part part={props.parts[2]} />
+    </>
+  ) 
+}
+
 const Total = (props) => {
   console.log(props)
   return (
     <>
-       <p>Number of exercises {props.number}</p>
+       <p>Number of exercises {props.parts[0].exercises+props.parts[1].exercises+props.parts[2].exercises}</p>
     </>
   )
 }
@@ -50,14 +61,11 @@ const App = () => {
   return (
     <div>
       <Header course={course} />
-      <Part part={parts[0]} />
-      <Part part={parts[1]} />
-      <Part part={parts[2]} />
-      
-    
-      <Total number={parts[0].exercises + parts[1].exercises + parts[2].exercises}/>
+      <Content parts={parts} />
+      <Total parts={parts} />
     </div>
   )
+  
 }
 
 
