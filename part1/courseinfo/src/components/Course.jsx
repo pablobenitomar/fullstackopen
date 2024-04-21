@@ -41,5 +41,4 @@ const Header = ({course}) => {
         <Total parts={course.parts} />
       </div>
     )
-  
   }
